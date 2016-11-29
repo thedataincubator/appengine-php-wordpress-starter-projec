@@ -1,7 +1,14 @@
-application: gae-microservices-skeleton
-version: wpfromstarterproject
+service: module-php
 runtime: php55
 api_version: 1
+threadsafe: true
+
+env_variables:
+  # Replace project, instance, database, user and password with the values obtained
+  # when configuring your Cloud SQL instance.
+  MYSQL_DSN: mysql:unix_socket=/cloudsql/gae-microservices-skeleton:us-east1:wordpress3;dbname=wordpress_db
+  MYSQL_USER: root
+  MYSQL_PASSWORD: ''
 
 handlers:
 - url: /(.*\.(htm|html|css|js))$
@@ -54,3 +61,4 @@ skip_files:
 - ^(.*/)?\.bat$
 - ^(.*/)?\.sh$
 - ^(.*/)?\.md$
+- ^.git
