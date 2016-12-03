@@ -52,6 +52,24 @@ This script:
 3. Moves `batcache/batcache.php` to `wordpress/wp-content/plugins/`
 4. Moves `wp-memcache/object-cache.php` to `wordpress/wp-content/`
 5. Moves the contents of `appengine-wordpress-plugin/` to `wordpress/wp-content/plugins/`
+6. Moves the contents of `blog` to `wordpress/wp-content/themes/.`
+
+### Step 4: Activate the theme
+Go to [/wp-admin/themes.php](/wp-admin/themes.php) (or go to [/wp-admin/](/wp-admin/) and select `Appearance -> Themes`.  Select the theme entitled "Data Incubator".
+
+### Step 5: (Migration Only) Download the database
+Copy the old database from [https://server78.web-hosting.com:2083/logout/?locale=en](https://server78.web-hosting.com:2083/logout/?locale=en) by going to `phpMyAdmin`, `Export` and exporting a `SQL` file (usually called `localhost.sql`).  Be sure to only download the database `prinsbzc_diblog`.
+
+To load it into the local mysql, run
+
+    mysql -u root -p wordpress_db < localhost.sql
+
+which will prompt you for a password.  If it complains about `Duplicate entry '1' for key 'PRIMARY'`, you'll have to reset the database
+
+    echo "DROP DATABASE wordpress_db;" | mysql -u root -p wordpress_db
+    mysql -u root -p < databasesetup.sql
+
+before reloading into SQL.
 
 ## Running WordPress locally
 
