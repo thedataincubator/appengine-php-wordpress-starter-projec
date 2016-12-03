@@ -13,3 +13,6 @@
 [submodule "blog"]
 	path = blog
 	url = git@github.com:thedataincubator/blog.git
+[submodule "wordpress-seo"]
+	path = wordpress-seo
+	url = git@github.com:Yoast/wordpress-seo.git
