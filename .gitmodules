@@ -1,18 +1,18 @@
 [submodule "appengine-wordpress-plugin"]
-	path = appengine-wordpress-plugin
+	path = modules/appengine-wordpress-plugin
 	url = https://github.com/GoogleCloudPlatform/appengine-wordpress-plugin.git
 [submodule "batcache"]
-	path = batcache
+	path = modules/batcache
 	url = https://github.com/Automattic/batcache.git
 [submodule "wp-memcache"]
-	path = wp-memcache
+	path = modules/wp-memcache
 	url = https://github.com/jeremyfelt/Memcached-Object-Cache.git
 [submodule "wordpress"]
-	path = wordpress
+	path = modules/wordpress
 	url = https://github.com/WordPress/WordPress.git
 [submodule "blog"]
-	path = blog
+	path = modules/blog
 	url = git@github.com:thedataincubator/blog.git
 [submodule "wordpress-seo"]
-	path = wordpress-seo
+	path = modules/wordpress-seo
 	url = git@github.com:Yoast/wordpress-seo.git
