@@ -1,6 +1,6 @@
 service: module-php
 runtime: php55
-api_version: 1
+api_version: 2
 threadsafe: true
 
 env_variables:
@@ -62,3 +62,4 @@ skip_files:
 - ^(.*/)?\.sh$
 - ^(.*/)?\.md$
 - ^.git
+- ^modules

@@ -44,7 +44,7 @@
         $protocol_to_use = 'http://';
     }
     define( 'WP_SITEURL', $protocol_to_use . $_SERVER['HTTP_HOST']);
-    define( 'WP_HOME', $protocol_to_use . $_SERVER['HTTP_HOST'] . '/blog/');
+    define( 'WP_HOME', $protocol_to_use . $_SERVER['HTTP_HOST']);
 
     /** Database Charset to use in creating database tables. */
     define('DB_CHARSET', 'utf8');
